@@ -8,5 +8,4 @@ to be or not to be ,that is a question.
 //合并某分支到当前分支 git merge <name>
 //删除分支 git branch -d dev
 
-
-//master 解决冲突
+//master和dev不同分支之间解决冲突
