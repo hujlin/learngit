@@ -49,4 +49,9 @@ git add *.文件类型   添加目录中所有某种文件类型的文件
 git一次add多个文件(多个文件用空格隔开)
 git add file_1 file_2 file_3
 
-
+git pull 失败 ,提示：fatal: refusing to merge unrelated histories的错误的解办法
+其实这个问题是因为两个不相干的git库，一个是本地库一个是远程库，然后本地要去推送到远端，远端觉得这个本地库根自己不相干，所以告知无法合并
+具体的方法，
+一个种方法： 是 从远端库拉下来代码 ， 本地要加入的代码放到远端库下载到本地的库， 然后提交上去 ， 因为这样的话， 你基于的库就是远端的库， 这是一次update了
+第二种是强制方法：
+git pull origin master --allow-unrelated-histories
